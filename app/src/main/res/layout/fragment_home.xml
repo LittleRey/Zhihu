@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg"
+            android:paddingLeft="8dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/search" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center|left"
+                android:text="毕业最让你伤感的事情是什么" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@mipmap/qd" />
+
+    </LinearLayout>
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    app:elevation="10dp"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+    <net.lucode.hackware.magicindicator.MagicIndicator
+        android:id="@+id/tab"
+        app:tabIndicatorColor="#000"
+        app:tabSelectedTextColor="#000"
+        app:tabTextColor="#9b9b9b"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+</android.support.design.widget.AppBarLayout>
+
+<android.support.v4.view.ViewPager
+    android:id="@+id/vp"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="0dp"/>
+</LinearLayout>
