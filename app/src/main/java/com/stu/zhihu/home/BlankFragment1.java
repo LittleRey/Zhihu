@@ -51,7 +51,7 @@ public class BlankFragment1 extends Fragment {
                     public void run() {
                         sw.setRefreshing(false);
                     }
-                }, 1000);
+                }, 500);
             }
         });
         final List<Data1> list = new ArrayList<>();
@@ -108,7 +108,7 @@ public class BlankFragment1 extends Fragment {
 
                 });
             }
-        }, 1500);
+        }, 1000);
         return view;
     }
 
