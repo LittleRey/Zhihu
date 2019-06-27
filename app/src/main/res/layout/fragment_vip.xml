@@ -8,10 +8,11 @@
     tools:context=".vip.VipFragment">
 
     <LinearLayout
+        android:gravity="center|start"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="20dp"
-        android:paddingTop="5dp"
+        android:paddingTop="10dp"
         android:paddingBottom="8dp">
 
         <android.support.v7.widget.CardView
@@ -54,16 +55,16 @@
             android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:background="@mipmap/qqqqq111" />
+            android:background="@mipmap/viptiplogo" />
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:background="@mipmap/qqqqq111" />
+            android:background="@mipmap/sousuovip" />
     </LinearLayout>
 
     <LinearLayout

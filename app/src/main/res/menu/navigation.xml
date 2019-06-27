@@ -8,7 +8,7 @@
 
     <item
         android:id="@+id/navigation2"
-        android:icon="@mipmap/vop"
+        android:icon="@mipmap/huiyuan"
         android:title="会员" />
     <item
         android:id="@+id/navigationzx"
@@ -16,10 +16,10 @@
         android:title="" />
     <item
         android:id="@+id/navigation3"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@mipmap/tongzhi"
         android:title="通知" />
     <item
         android:id="@+id/navigation4"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@mipmap/wode"
         android:title="我的" />
 </menu>

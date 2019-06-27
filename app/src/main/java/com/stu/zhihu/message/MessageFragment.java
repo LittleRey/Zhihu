@@ -68,7 +68,7 @@ public class MessageFragment extends Fragment {
             @Nullable
             @Override
             public CharSequence getPageTitle(int position) {
-                return position==0?"我的":"你的";
+                return position==0?"通知":"私信";
             }
         });
 

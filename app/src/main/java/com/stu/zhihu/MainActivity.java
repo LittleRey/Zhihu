@@ -1,6 +1,7 @@
 package com.stu.zhihu;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.internal.BottomNavigationMenuView;
@@ -29,30 +30,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-       // startActivity(new Intent(this,Main3Activity.class));
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new HomeFragment()).commit();
-        resetToDefaultIcon();
+        MenuItem home1 = bottomnavigationview.getMenu().findItem(R.id.navigationzx);
+        //home1.setIconTintList(null);
+        // home1.setIcon(R.mipmap.a1);
+        // startActivity(new Intent(this,Main3Activity.class));
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new HomeFragment()).commit();
+        //  resetToDefaultIcon();
+        int[][] states = new int[][]{new int[]{-android.R.attr.state_checked}, new int[]{android.R.attr.state_checked}};
+        //int[] colors = new int[]{ getResources().getColor(R.color.checked_color),  getResources().getColor(R.color.uncheck_color) };
+        // ColorStateList csl = new ColorStateList(states, colors);
         bottomnavigationview.setItemIconTintList(null);//.去掉不显示图片默认颜色：
         bottomnavigationview.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                resetToDefaultIcon();
-                switch (menuItem.getItemId()){
+                //resetToDefaultIcon();
+                switch (menuItem.getItemId()) {
                     case R.id.navigation1:
-                        menuItem.setIcon(R.mipmap.a1_select);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new HomeFragment()).commit();
+                        getWindow().setStatusBarColor(0xffedf1f4);
+                        // menuItem.setIcon(R.mipmap.a1_select);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new HomeFragment()).commit();
                         break;
                     case R.id.navigation2:
-                        menuItem.setIcon(R.mipmap.a2);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new VipFragment()).commit();
+                        getWindow().setStatusBarColor(0xffedf1f4);
+                        //  menuItem.setIcon(R.mipmap.a2);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new VipFragment()).commit();
                         break;
                     case R.id.navigation3:
-                        menuItem.setIcon(R.mipmap.a3);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new MessageFragment()).commit();
+                        // menuItem.setIcon(R.mipmap.a3);
+                        getWindow().setStatusBarColor(0xffedf1f4);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new MessageFragment()).commit();
                         break;
                     case R.id.navigation4:
-                        menuItem.setIcon(R.mipmap.a4);
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment,new MyFragment()).commit();
+                        //  menuItem.setIcon(R.mipmap.a4);
+                        getWindow().setStatusBarColor(0xff1296db);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment, new MyFragment()).commit();
                         break;
                 }
                 return false;
@@ -74,16 +85,17 @@ public class MainActivity extends AppCompatActivity {
         fragment = (FrameLayout) findViewById(R.id.fragment);
         bottomnavigationview = (BottomNavigationView) findViewById(R.id.bottomnavigationview);
     }
+
     private void resetToDefaultIcon() {
-        MenuItem home1 =  bottomnavigationview.getMenu().findItem(R.id.navigation1);
+        MenuItem home1 = bottomnavigationview.getMenu().findItem(R.id.navigation1);
         home1.setIcon(R.mipmap.a1);
-        MenuItem home2 =  bottomnavigationview.getMenu().findItem(R.id.navigation2);
+        MenuItem home2 = bottomnavigationview.getMenu().findItem(R.id.navigation2);
         home2.setIcon(R.mipmap.a2);
-        MenuItem home3 =  bottomnavigationview.getMenu().findItem(R.id.navigation3);
+        MenuItem home3 = bottomnavigationview.getMenu().findItem(R.id.navigation3);
         home3.setIcon(R.mipmap.a3);
-        MenuItem home4 =  bottomnavigationview.getMenu().findItem(R.id.navigation4);
+        MenuItem home4 = bottomnavigationview.getMenu().findItem(R.id.navigation4);
         home4.setIcon(R.mipmap.a4);
-        MenuItem zx =  bottomnavigationview.getMenu().findItem(R.id.navigationzx);
+        MenuItem zx = bottomnavigationview.getMenu().findItem(R.id.navigationzx);
 
     }
 }
